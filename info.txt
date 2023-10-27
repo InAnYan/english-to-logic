@@ -1,0 +1,65 @@
+Negation of p -> It is not the case that p.
+Conjunction of p and q -> p and q, p but q.
+Disjunction of p and q -> p or q.
+Implication of p and q -> ............
+Biconditional of p and q -> ...........
+
+Придаточные предложения как предикаты.
+
+
+Clasification of failures:
+
+1. Unability to translate several objects as several propositions:
+It is below freezing and snowing.
+You can pay using U.S. dollars or euros.
+
+2. Additional words: (?)
+If the file system is not locked, then the system is functioning normally, and conversely.
+You get an A on the final, but you don’t do every exercise in this book; nevertheless, you get an A in this class.
+
+3. The negation of verbs works perfectly only with passive constructs:
+The router does not support the new address space.
+You get an A in this class, but you do not do every exercise in this book.
+You get an A in this class and you do not do every exercise in this book.
+You can graduate only if you have completed the requirements of your major and you do not owe money to the university and you do not have an overdue library book.
+* The automated reply cannot be sent when the file system is full.
+
+4. Lexical analysis simplyfies too much:
+If it is below freezing, it is also snowing.
+Whenever the system software is being upgraded, users cannot access the file system.
+If berries are ripe along the trail, hiking is safe if and only if grizzly bears have not been seen in the area.
+You get an A on the final, you do every exercise in this book, and you get an A in this class.
+
+5. The program doesn't understand the meaning of the text:
+The diagnostic message is stored in the buffer or it is retransmitted.
+If users can access the file system, then they can save new files.
+Access is granted whenever the user has paid the subscription fee and enters a valid password. (enters ...)
+To use the wireless network in the airport you must pay the daily fee unless you are a subscriber to the service.
+
+6. Logical/grammatical precedence does not correspond to the precedence of natural language.
+(english->logic-test "Either it is below freezing or it is snowing, but it is not snowing if it is below freezing."
+                     '(and (or p q) (-> p (not q))))
+
+
+Something usual (stop words):
+If Smartphone B has more RAM and more ROM than Smartphone C, then it also has a higher resolution camera.
+Either it is elow freezing or it is snowing, but it is not snowing if it is below freezing.
+
+
+Tests usual:
+It is not below freezing and it is not snowing.
+Getting an A on the final and doing every exercise in this book is sufficient for getting an A in this class.
+You will get an A in this class if and only if you either do every exercise in this book or you get an A on the final.
+Hiking is not safe on the trail whenever grizzly bears have been seen in the area and berries are ripe along the trail.
+You can access the Internet from campus only if you are a computer science major or you are not a freshman.
+You can see the movie only if you are over 18 years old or you have the permission of a parent.
+The router can send packets to the edge system if the latest software release is installed.
+
+Tests simple:
+It is below freezing.
+It is not below freezing.
+Nadir Software had the lowest net profit and Acme Computer had the largest annual revenue.
+The kernel is not functioning or the system is in interrupt mode.
+If users can access the file system, then they can save new files
+The system is in multiuser state if and only if the system is operating normally
+
