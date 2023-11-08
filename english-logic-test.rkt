@@ -1,9 +1,7 @@
 #lang racket
 
-
 (require rackunit
          "english-logic.rkt")
-
 
 (define (english->logic-test str should-expr . should-vars)
   (printf "-- Testing: ~v.~%" str)
@@ -17,12 +15,10 @@
     (check-equal? (sublis expr vars) (sublis should-expr should-vars))
     (printf "~%")))
 
-
 ; Tests:
 ; 1. Vars can be anything.
 ; 2. Meaning of the vars is necessarry.
 ; 3. Rules of logic are not supported (like associativity of biimplication).
-
 
 (define english->logic-tests
   '(["It is below freezing."
@@ -108,7 +104,6 @@
      (p "the latest software release is installed")
      (q "the router can send packets to the edge system")]))
 
-
 (define (sublis x lst)
   (cond
     [(assoc x lst)
@@ -118,7 +113,6 @@
             (sublis y lst))
           x)]
     [else x]))
-
 
 (for-each (lambda (test)
             (apply english->logic-test test))
