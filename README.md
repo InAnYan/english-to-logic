@@ -45,6 +45,7 @@ This command will present you different sentences and the results of the transla
 ## How this Project is Implemented.
 
 **Input**: an English sentence as a string.
+
 **Output**: a pair of a logic expression (using prefix notation) and an association list of a logic variable and its string.
 
 1. Downcase the input
