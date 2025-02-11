@@ -8,7 +8,7 @@
   (let* [(res (english->logic str))
          (expr (first res))
          (vars (second res))]
-    (printf "-- Result: ~a.~%" expr)
+    (printf "-- Result: ~a.~%" (logic->string res))
     (for-each (lambda (entry)
                 (printf "     ~a = ~v;~%" (first entry) (second entry)))
               vars)
